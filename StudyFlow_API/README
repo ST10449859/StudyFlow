@@ -1,0 +1,95 @@
+# StudyFlow – PHP Backend API
+
+## 1. Project Overview
+
+StudyFlow is a study productivity application designed to help students manage their academic activities, track study sessions, develop productive habits and monitor their learning progress.
+
+This repository contains the PHP backend API that connects the Android application to the MySQL database.
+
+## 2. Technologies Used
+
+- PHP
+- MySQL
+- Apache Server
+- XAMPP
+- JSON REST API
+- Android application integration
+
+## 3. System Requirements
+
+- XAMPP
+- PHP 8 or later
+- MySQL or MariaDB
+- Web browser
+- Visual Studio Code
+
+## 4. Database
+
+The backend uses a MySQL database named `studyflow`.
+
+The database contains the following tables:
+
+1. users
+2. tasks
+3. api_tokens
+4. subjects
+5. habits
+6. study_sessions
+7. user_settings
+8. notifications
+
+## 5. API Features
+
+The backend provides the following functionality:
+
+- User registration and login.
+- Authentication using API tokens.
+- Creating, retrieving, updating and deleting study tasks.
+- Creating and retrieving habits.
+- Recording study sessions.
+- Calculating study progress, XP, levels and streaks.
+- Updating user settings.
+
+## 6. API Endpoints
+
+| Endpoint | Method | Purpose |
+|---|---|---|
+| `api/auth/register.php` | POST | Register a user |
+| `api/auth/login.php` | POST | Authenticate a user |
+| `api/tasks.php` | GET, POST, PUT, DELETE | Manage tasks |
+| `api/habits.php` | GET, POST | Manage habits |
+| `api/study-sessions.php` | POST | Record study sessions |
+| `api/progress.php` | GET | Retrieve progress |
+| `api/settings.php` | PUT | Update settings |
+
+## 7. Installation Instructions
+
+1. Install and open XAMPP.
+2. Start Apache and MySQL.
+3. Copy the `StudyFlow_API` folder into the XAMPP `htdocs` directory.
+4. Open phpMyAdmin.
+5. Create or import the `studyflow` database.
+6. Configure the database connection in the backend configuration file.
+7. Open the API connection test in a browser to verify database connectivity.
+
+## 8. Database Connection Test
+
+Open:
+
+`http://localhost/StudyFlow_API/test_connection.php`
+
+A successful connection should return a JSON response indicating that the StudyFlow database is connected successfully.
+
+## 9. Security
+
+- Passwords are handled using secure password hashing.
+- API endpoints use authentication tokens.
+- Authenticated requests require a valid Bearer token.
+- Database credentials should be kept private and must not be committed to a public GitHub repository.
+
+## 10. Developer Information
+
+**Project:** StudyFlow  
+**Component:** PHP Backend API  
+**Database:** MySQL  
+**Purpose:** Provides backend services and database connectivity for the StudyFlow Android application.
